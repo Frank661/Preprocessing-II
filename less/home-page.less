@@ -1,43 +1,66 @@
+
+
+
+
 .home {
+
+  
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
-    
+    @media @mobile {
+      width: 100%;
+      flex-direction: column-reverse;
+      align-content: center;
+    }
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        order: 1;
+        width: 100%;
+        padding-left: 0%;
     }
-
-    .img-content {
+    .text-content1 {
+      @media @mobile {
+        padding-left: 10%;
+      }
+    }
+  }
+    .img-content1 {
       width: 48%;
       padding-left: 1%;
-
+      @media @mobile {
+        order: 0;
+        width: 80%;
+        margin-left: 10%;
+      }
       img {
         border-radius: 10px;
       }
     }
+    .img-content2 {
+      .img-content1();
+    }
   }
 
-  .inverse-content {
+    .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
-    .text-content {
-      padding-left: 1%;
+     .text-content {
+      padding-left: 10%;
       padding-right: 0;
     }
-
-    .img-content {
+     .img-content {
       padding-right: 1%;
       padding-left: 0;
     }
-  }
-
+   }
+  
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
@@ -52,10 +75,51 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      width: 100%;
+      display: block;
+      align-content: center;
+    }
+    .destination1 {
 
-    .destination {
-      width: 30%;
+      width: 100%;
       margin-bottom: 30px;
+      @media @mobile {
+        width: 100%;
+        padding-left: 15%;
+        align-items: left;
+        width: 80%;
+        
+      }
+      button {
+        .mixbutton(1.4rem, 10px)
+      }
+    }
+    .destination2 {
+      .destination1();
+    }
+    .destination3 {
+      .destination1();
     }
   }
-}// home
+  header {
+     align-content: center;
+     border-bottom: 2px dashed silver;
+     @media @mobile {
+       width: 100%;
+       padding-left: 10%;
+       padding-right: 10%;
+       h1 {font-size: 3.2rem;}
+     }
+  }
+}
+  // @media @mobile {
+  //   width: 80%;
+  //   display: block;
+  //   flex-wrap: nowrap;
+  //   color:blue;
+  // }
+
+
+
+// home
