@@ -1,1 +1,19 @@
 // Mixins in here
+.mixbutton(@size, @radius) {
+        font-size: @size;
+        color:white;
+        background-color: lighten(darkcyan,5%) ;
+        padding: 5%;
+        border-radius: @radius;
+        padding-left: 55px;
+        padding-right: 55px;
+        @media @mobile{
+            padding-left:35%;
+            padding-right: 35%;
+        }
+}
+
+.navmixin {
+    display: block;
+    width: 100%;
+}
